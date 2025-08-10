@@ -1,0 +1,9 @@
+variable "key_pair" {}
+variable "kube_host" {}
+variable "kube_client_certificate" {}
+variable "kube_client_key" {}
+variable "kube_cluster_ca_certificate" {}
+variable "github_token" {}
+variable "github_owner" {}
+variable "github_repo" {}
+variable "branch" {}
