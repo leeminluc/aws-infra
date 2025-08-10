@@ -16,3 +16,18 @@ terraform init -migrate-state
 ```
 terraform apply
 ```
+
+5. Install and Bootstrap Flux
+```
+curl -s https://fluxcd.io/install.sh | sudo FLUX_VERSION=2.6.0 bash
+GITHUB_TOKEN=ghp_xxxxxx
+
+flux bootstrap github \
+    --owner=leeminluc \
+    --repository=gitops \
+    --path=clusters/aws_k3s \
+    --private=true --personal=true \
+    --components-extra=image-reflector-controller,image-automation-controller \
+    --read-write-key
+```
+
